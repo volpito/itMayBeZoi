@@ -45,7 +45,7 @@ export default function Avantages() {
       </div>  
       <Link
         to="/menu"
-        className="absolute inset-x-1 justify-items-center max-w-xs mx-auto my-6 inline-flex items-center justify-center px-5 py-3 border border-sm border-gray shadow text-xl font-medium rounded-sm text-gray-600 bg-white hover:bg-gray-900 hover:text-white"
+        className="absolute inset-x-1 justify-items-center max-w-xs mx-auto my-6 inline-flex items-center justify-center px-5 py-3 border border-sm border-gray shadow text-xl font-medium rounded-sm text-gray-600 bg-white hover:bg-green-600 hover:text-white"
       >
         Découvrez la carte
       </Link>  

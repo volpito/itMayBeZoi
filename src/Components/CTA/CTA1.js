@@ -12,7 +12,7 @@ export default function CTA1() {
           <div className="ml-auto inline-flex rounded-sm shadow">
             <Link
               to="/access"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-xl font-medium rounded-sm text-gray-600 bg-white hover:bg-gray-900 hover:text-white"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-xl font-medium rounded-sm text-gray-600 bg-white hover:bg-green-600 hover:text-white"
             >
               Venez nous voir !
             </Link>

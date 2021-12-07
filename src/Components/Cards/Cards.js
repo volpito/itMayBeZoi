@@ -25,7 +25,7 @@ const people = [
 ]
 
   return (
-    <div className="mx-auto py-20 bg-blue-50">
+    <div className="mx-auto py-20 bg-green-50">
         <h2 className="sm:ml-16 font-bold tracking-tight text-gray-900 text-xl sm:text-4xl pb-12">
           <span className="sticky sm:-mt-32 -mt-24 block w-40 sm:w-72 text-white sm:py-6 py-2 bg-gray-800 px-2 rounded-sm">On s'engage !</span>
         </h2>      
