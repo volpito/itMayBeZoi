@@ -8,9 +8,9 @@ function HeroBanner() {
           <div className="inset-x-0 bottom-0 h-1/2 bg-gray-100" />
           <div className="max-w-8xl mx-auto">
             <div className="shadow-xl sm:overflow-hidden">
-              <div className=" inset-0">
+              <div className="inset-0">
                 <img
-                  className="h-auto object-cover"
+                  className="object-cover w-full"
                   src={banner}
                   alt="fine patisserie"
                 />

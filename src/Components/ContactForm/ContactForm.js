@@ -172,7 +172,7 @@ export default function ContactForm() {
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
                     type="submit"
-                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium sm:text-gray-800 sm:bg-white hover:bg-green-700 hover:text-white bg-green-600 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto"
+                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium sm:text-gray-800 sm:bg-white hover:bg-green-600 hover:text-white bg-green-600 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto"
                   >
                     Envoyer
                   </button>
