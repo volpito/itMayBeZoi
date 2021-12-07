@@ -7,7 +7,7 @@ export default function Avantages() {
   return (
     <div className="flex pb-32">
       <div className="sm:px-6 lg:px-8 mx-auto py-12">
-        <h2 className="sticky -ml-32 text-xl sm:text-4xl sm:py-6 py-2 -mt-20 pl-2 font-bold text-left bg-gray-900 text-white w-9/12 sm:w-6/12 rounded-sm">Qu'est-ce qu'on trouve chez Zoï ?</h2>
+        <h2 className="sticky sm:-ml-22 text-xl sm:text-4xl sm:py-6 py-2 -mt-20 pl-2 font-bold text-left bg-gray-900 text-white w-9/12 sm:w-6/12 rounded-sm">Qu'est-ce qu'on trouve chez Zoï ?</h2>
         
         <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 flex-shrink-0 self-center py-12"> 
