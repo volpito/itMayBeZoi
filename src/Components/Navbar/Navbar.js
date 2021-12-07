@@ -32,11 +32,13 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
               <div className="-mt-2">
-                <img
-                  className="hidden lg:block h-20 w-auto"
-                  src={logo}
-                  alt="Zoi écrit en blanc sur fond noir"
-                />
+                <Link to="/">
+                  <img
+                    className="hidden lg:block h-20 w-auto"
+                    src={logo}
+                    alt="Zoi écrit en blanc sur fond noir"
+                  />
+                </Link>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-center">
                 <div className="flex-shrink-0 flex items-center">

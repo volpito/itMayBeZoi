@@ -17,12 +17,11 @@ function HeroBanner() {
               </div>
             </div>
           </div>
-          <a
-            href="#"
+          <p
             className="sticky sm:-mt-10 -mt-4 sm:h-24 flex items-center justify-center font-bold text-xl sm:text-4xl text-center sm:max-w-3xl max-w-sm mx-auto px-4 py-3 border border-transparent text-base font-medium rounded-sm shadow-sm text-white bg-gray-900 sm:px-8"
           >
             Une nouvelle expérience de la pâtisserie
-          </a>
+          </p>
         </div>
       </main>
   )

@@ -1,9 +1,29 @@
 import React from 'react'
+import banner from '../Assets/Images/banner.png'
 
 function Access() {
   return (
     <div>
-      <h1>hello accès</h1>
+      <div className="bg-fixed h-80 bg-top bg-cover" style={{backgroundImage: `url(${banner})`}}/>
+      <p
+        className="sticky sm:-mt-10 -mt-4 sm:h-24 flex items-center justify-center font-bold text-xl sm:text-4xl text-center sm:max-w-3xl max-w-sm mx-auto px-4 py-3 border border-transparent text-base font-medium rounded-sm shadow-sm text-white bg-gray-900 sm:px-8"
+      >
+        On se retrouve à La boutique ?
+      </p>
+      <p className="my-12 text-gray-900">
+        <span className="block text-center">46 Montée de la Grande Côte</span>
+
+        <span className="block text-center mb-12">69001 LYON</span>
+
+        <span className="block text-center">Le lundi : de 8H30 à 18H</span>
+
+        <span className="block text-center">Du mardi au vendredi : de 8H30 à 19H</span>
+
+        <span className="block text-center">Le samedi : de 10H à 19H</span>
+
+        <span className="block text-center">Le dimanche : de 10h à 18H</span>
+      </p>
+      <div className="bg-fixed h-80 bg-top bg-cover" style={{backgroundImage: `url(${banner})`}}/>
     </div>
   )
 }
