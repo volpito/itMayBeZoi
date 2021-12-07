@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from '../Assets/Images/banner.png'
+import GMaps from '../Components/GMaps/GMaps';
 
 function Access() {
   return (
@@ -10,11 +11,11 @@ function Access() {
       >
         On se retrouve à La boutique ?
       </p>
-      <p className="my-12 text-gray-900">
+      <p className="my-12 text-gray-700">
         <span className="block text-center">46 Montée de la Grande Côte</span>
 
-        <span className="block text-center mb-12">69001 LYON</span>
-
+        <span className="block text-center">69001 LYON</span>
+        <hr className="my-6 w-1/12 mx-auto"/>
         <span className="block text-center">Le lundi : de 8H30 à 18H</span>
 
         <span className="block text-center">Du mardi au vendredi : de 8H30 à 19H</span>
@@ -23,6 +24,9 @@ function Access() {
 
         <span className="block text-center">Le dimanche : de 10h à 18H</span>
       </p>
+
+      <GMaps />
+
       <div className="bg-fixed h-80 bg-top bg-cover" style={{backgroundImage: `url(${banner})`}}/>
     </div>
   )
