@@ -25,18 +25,18 @@ const people = [
 ]
 
   return (
-    <div className="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8 py-20">
-        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-12">
-          <span className="block text-white sm:py-6 py-2 bg-gray-800 text-center px-2 w-64 rounded-sm">On s'engage !</span>
+    <div className="mx-auto py-20 bg-blue-50">
+        <h2 className="sm:ml-16 font-bold tracking-tight text-gray-900 text-xl sm:text-4xl pb-12">
+          <span className="sticky sm:-mt-32 -mt-24 block w-40 sm:w-72 text-white sm:py-6 py-2 bg-gray-800 px-2 rounded-sm">On s'engage !</span>
         </h2>      
-        <div className="space-y-8 sm:space-y-12">
+        <div className="space-y-8 sm:space-y-12 mt-12 text-center">
         <ul
           className="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-3"
         >
         {people.map((person) => (
           <li key={person.role}>
             <div className="space-y-4">
-              <img className={`rounded-xl p-2 bg-gray-50 mx-auto h-40 w-40 lg:w-40 lg:h-40 ${person.classname}`} src={person.imageUrl} alt="" />
+              <img className={`rounded-xl mx-auto h-40 w-40 lg:w-40 lg:h-40 ${person.classname}`} src={person.imageUrl} alt="" />
               <div className="space-y-2">
                 <div className="text-xs font-medium lg:text-sm">
                   <p className="text-gray-400">{person.role}</p>

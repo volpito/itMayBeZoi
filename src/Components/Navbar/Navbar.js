@@ -52,7 +52,7 @@ export default function Example() {
                     to="/"
                     className={classNames(
                       current ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                      'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                      'inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium'
                     )}
                     aria-current={current ? 'page' : undefined}
                   >
@@ -62,7 +62,7 @@ export default function Example() {
                     to="/menu"
                     className={classNames(
                       current ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                      'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                      'inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium'
                     )}                  >
                     La carte des gâteaux
                   </Link>
@@ -70,7 +70,7 @@ export default function Example() {
                     to="/access"
                     className={classNames(
                       current ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                      'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                      'inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium'
                     )}                  >
                     Zoï - c'est où ?
                   </Link>
@@ -78,7 +78,7 @@ export default function Example() {
                     to="/contact"
                     className={classNames(
                       current ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                      'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                      'inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium'
                     )}                  >
                     contact
                   </Link>
