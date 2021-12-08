@@ -15,7 +15,7 @@ export default function Example() {
   const [current, setCurrent] = useState(false)
 
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-white shadow py-8">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
