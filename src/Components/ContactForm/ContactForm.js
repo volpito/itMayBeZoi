@@ -8,7 +8,7 @@ export default function ContactForm() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 lg:mt-16">
             {/* Contact information */}
-            <div className="relative overflow-hidden pt-10 px-6 bg-transparent sm:px-10 xl:p-12 text-lg sm:text-xl">
+            <div className="relative overflow-hidden pt-10 px-6 bg-transparent sm:px-10 xl:p-12 text-lg sm:text-xl lg:my-auto my-10">
               <h2 className="sm:text-4xl text-xl font-medium text-gray-50">On s'écrit ? ❤️ </h2>
               <p className="mt-6 text-base text-lg text-gray-50 max-w-3xl">
               Une question, une commande ou juste un mot gentil, on sera ravis de vous répondre le plus rapidement possible ! 
@@ -172,7 +172,7 @@ export default function ContactForm() {
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
                     type="submit"
-                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium sm:text-gray-800 sm:bg-white hover:bg-yellow-400 hover:text-white bg-green-600 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto"
+                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium sm:text-gray-800 sm:bg-white bg-white text-gray-800 transform hover:rotate-180 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:w-auto"
                   >
                     Envoyer
                   </button>
