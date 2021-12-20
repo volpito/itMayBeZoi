@@ -29,9 +29,9 @@ export default function ContactForm() {
                   <span className="ml-3">contact@zoi-kitchen.com</span>
                 </dd>
               </dl>
-              <ul role="list" className="mt-8 flex space-x-12">
+              <ul className="mt-8 flex space-x-12">
                 <li>
-                  <a className="text-gray-200 hover:text-gray-100" href="#">
+                  <a className="text-gray-200 hover:text-gray-100" href="www.www.fr">
                     <span className="sr-only">Facebook</span>
                     <svg
                       width={24}
@@ -50,7 +50,7 @@ export default function ContactForm() {
                   </a>
                 </li>
                 <li>
-                  <a className="text-gray-200 hover:text-gray-100" href="#">
+                  <a className="text-gray-200 hover:text-gray-100" href="www.www.fr">
                     <span className="sr-only">Twitter</span>
                     <svg
                       width={24}
