@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CakeIndex from '../Components/CakeIndex/CakeIndex';
 
 function Vitrine() {
 
   const [email, setEmail] = useState("");
-  const [user, setUser] = useState("");
+  const [headers, setHeaders] = useState(null);
   const [password, setPassword] = useState("");
-  const logInfo = { "user": { "email": email, "password": password } };
+  const [logInfo, setLogInfo] = useState({});
 
   const url="http://localhost:8000/users/sign_in";
-
-  const csrfToken = document.querySelector('meta[name="authorization"]');
-  console.log(csrfToken);
 
   const onSend = (e) => {
     e.preventDefault();
 
+    setLogInfo({ "user": { "email": email, "password": password } });
+  };
+
+  useEffect(() => {
     fetch(url, {
       method: 'post',
       headers: {
@@ -24,24 +25,34 @@ function Vitrine() {
       body: JSON.stringify(logInfo),
     })
       .then((response) => {
-
-        response.json()
-        .then((json) => {
-          setUser(json.current_user.email ? json.current_user.email : "")
+        return response;
+      })
+      .then((res) => {
+        res
+          .json()
+          .then((json) => ({
+            
+            headers: (json ? json : null),
+            token: json.headers,
+            json,
+          }))
+        .then(({ headers, token }) => {
+          setHeaders(headers)
+          const tokenn = token;
+          console.log(tokenn)
+          console.log(headers)
         })
-        console.log(user);
       })
 
       .catch((error) => {
         console.log({ error });
-      })};
+      })
+  }, [logInfo])
 
   return (
     
     <div className='bg-red-50 p-24'>
-
-      {!user &&(
-          
+      {headers && headers.message !== "You are logged in." &&
         <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm mx-auto h-full">
           <form onSubmit={onSend}>
             <div className="form-group mb-6">
@@ -124,8 +135,8 @@ function Vitrine() {
               ease-in-out">Go !</button>
           </form>
         </div>
-      )}
-      {user && (
+      } 
+      {headers && headers.message === "You are logged in." && (
         <CakeIndex />
       )}
     </div>

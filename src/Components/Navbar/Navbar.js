@@ -1,5 +1,4 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { useState } from 'react'
 import { Disclosure} from '@headlessui/react'
 import { CakeIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom';
@@ -12,7 +11,7 @@ function classNames(...classes) {
 
 export default function Example() {
 
-  const [current, setCurrent] = useState(false)
+  const current = false;
 
   return (
     <Disclosure as="nav" className="bg-white shadow py-8">
