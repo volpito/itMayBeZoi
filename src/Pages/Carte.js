@@ -1,5 +1,6 @@
 import React from 'react'
 import pic from '../Assets/Images/montee.jpg'
+import CakeIndex from '../Components/CakeIndex/CakeIndex';
 
 function Carte() {
   return (
@@ -8,6 +9,7 @@ function Carte() {
         <h2 className="text-xl font-bold">
           En vitrine aujourd'hui :
         </h2>
+        <CakeIndex />
       </div>  
       
       <div>
