@@ -8,7 +8,7 @@ function CakeHover(props) {
     <div>
       {available && (
       <section className="text-gray-600 body-font hidden sm:block">
-        <div className={`grid-cols-2 sm:grid-cols-4 max-w-6xl flex mx-auto ${props?.className}`}>
+        <div className="grid-cols-2 sm:grid-cols-4 max-w-6xl flex mx-auto">
             <div key={props.name} className={props.className}>
                 <div className="flex relative">
                   <img alt="gallery" className="absolute inset-0 w-full h-full object-cover object-center rounded-xl" src={props.image}/>

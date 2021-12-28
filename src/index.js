@@ -10,7 +10,7 @@ import Contact from "./Pages/Contact";
 import Carte from "./Pages/Carte";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from './Components/Footer/Footer';
-import Vitrine from './Pages/Vitrine';
+import Login from './Pages/Login';
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 
           <Route path="/contact" element={<Contact/>} />
 
-          <Route path="/vitrine" element={<Vitrine/>} />
+          <Route path="/Login" element={<Login/>} />
 
         </Routes>
         <Footer />

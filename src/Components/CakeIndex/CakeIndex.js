@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import CakeHover from '../CakeHover/CakeHover';
 
-function CakeIndex() {
-  
+function CakeIndex(props) {
+
   const url = "http://localhost:8000/cakes";
   const [cakes, setCakes] = useState([]);
 
@@ -33,7 +33,7 @@ function CakeIndex() {
         cakes.map((a, i) => {
         if(a.category.name === 'Classique'){
         return(
-          < CakeHover key={i} name={a.name} description={a.description} image={a.image} available={a.available}/>
+          < CakeHover key={i} name={a.name} description={a.description} image={a.image} available={a.available} className={props.className}/>
         )}
         return(null)
       })
@@ -43,7 +43,7 @@ function CakeIndex() {
         cakes.map((a, i) => {
         if(a.category.name === 'Saisonniers'){
         return(
-          < CakeHover key={i} name={a.name} description={a.description} image={a.image} available={a.available}/>
+          < CakeHover key={i} name={a.name} description={a.description} image={a.image} available={a.available} className={props.className}/>
         )}
         return(null)
       })
@@ -53,7 +53,7 @@ function CakeIndex() {
         cakes.map((a, i) => {
         if(a.category.name === 'Spéciaux'){
         return(
-          < CakeHover key={i} name={a.name} description={a.description} image={a.image} available={a.available}/>
+          < CakeHover key={i} name={a.name} description={a.description} image={a.image} available={a.available} className={props.className}/>
         )}
         return(null)
       })
