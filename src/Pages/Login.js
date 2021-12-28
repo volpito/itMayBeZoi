@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import CakeIndex from '../Components/CakeIndex/CakeIndex';
+import Cookies from 'js-cookie';
 
-function Vitrine() {
+import Admin from './Admin';
+
+function Login() {
 
   const [email, setEmail] = useState("");
-  const [headers, setHeaders] = useState(null);
   const [password, setPassword] = useState("");
   const [logInfo, setLogInfo] = useState({});
 
@@ -24,35 +25,35 @@ function Vitrine() {
       },
       body: JSON.stringify(logInfo),
     })
-      .then((response) => {
-        return response;
+    .then((response) => {
+      return response;
+    })
+    .then((res) =>
+      res
+        .json()
+        .then((json) => ({
+          token: res.headers.get("authorization").split(" ")[1],
+          json,
+        }))
+      .then(({ token, json }) => {
+        console.log(token)
+        console.log(json)
+        Cookies.set("user_id", json.token.id);
+        Cookies.set('token', token);
+        Cookies.set('email_owner', email);
       })
-      .then((res) => {
-        res
-          .json()
-          .then((json) => ({
-            
-            headers: (json ? json : null),
-            token: json.headers,
-            json,
-          }))
-        .then(({ headers, token }) => {
-          setHeaders(headers)
-          const tokenn = token;
-          console.log(tokenn)
-          console.log(headers)
-        })
-      })
+    )
 
-      .catch((error) => {
-        console.log({ error });
-      })
-  }, [logInfo])
+    .catch((error) => {
+      console.log({ error });
+    })
+
+  }, [logInfo, email])
 
   return (
     
     <div className='bg-red-50 p-24'>
-      {headers && headers.message !== "You are logged in." &&
+      {!Cookies.get('token')&& (
         <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm mx-auto h-full">
           <form onSubmit={onSend}>
             <div className="form-group mb-6">
@@ -135,12 +136,13 @@ function Vitrine() {
               ease-in-out">Go !</button>
           </form>
         </div>
-      } 
-      {headers && headers.message === "You are logged in." && (
-        <CakeIndex />
+      )}
+
+      {Cookies.get('token') && (
+        <Admin />
       )}
     </div>
   )
 }
 
-export default Vitrine
+export default Login

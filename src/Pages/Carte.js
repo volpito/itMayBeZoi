@@ -7,9 +7,9 @@ function Carte() {
     <div className="grid lg:grid-cols-3 grid-row-3 w-full justify-items-center text-gray-700">
       <div className="bg-yellow-50 w-full text-center py-12">
         <h2 className="text-xl font-bold">
-          En vitrine aujourd'hui :
+          En Login aujourd'hui :
         </h2>
-        <CakeIndex />
+        <CakeIndex className="w-64"/>
       </div>  
       
       <div>
