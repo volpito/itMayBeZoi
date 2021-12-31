@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { XIcon } from "@heroicons/react/outline";
+import React, { useEffect } from 'react'
+import { useState } from 'react';
 import Cookies from 'js-cookie';
+import { XIcon } from '@heroicons/react/outline';
 
-function CreateCakeForm(props) {
+function CakeEdit(props) {
 
   const { onClose } = props;
   const [formData, setFormData] = useState("")
@@ -11,15 +12,14 @@ function CreateCakeForm(props) {
   const [image, setImage] = useState("");
   const [available, setAvailable] = useState("");
   const [category_id, setCategory_id] = useState("");
-  
+  const url=`http://localhost:8000/cake/${props.id}`;
+
   const handleSubmit = event => {
     event.preventDefault();
 
     setFormData({ "cake": { "name": name, "description": description, "image": image, "available": available, "category_id": category_id } });
     console.log(formData);
   }
-
-  const url="http://localhost:8000/cakes";
 
   useEffect(() => {
     fetch(url, {
@@ -33,14 +33,15 @@ function CreateCakeForm(props) {
     .then((response) => {
       return response;
     })
+
     .catch((error) => {
       console.log({ error });
     })
 
-  }, [formData])
+  }, [url, formData])
 
   return (
-    <div className='absolute text-4xl bg-red-50 z-50 w-full -m-24'>
+    <div className='absolute right-12 text-4xl bg-red-50 z-50 w-1/2'>
       <XIcon onClick={onClose} className="m-6 w-7 h-7" />
       <form className='flex flex-col text-lg space-y-12 text-center text-gray-600' onSubmit={handleSubmit}>
       <label htmlFor="name">
@@ -74,4 +75,4 @@ function CreateCakeForm(props) {
   )
 }
 
-export default CreateCakeForm
+export default CakeEdit
