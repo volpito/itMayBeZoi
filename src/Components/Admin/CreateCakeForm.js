@@ -40,7 +40,7 @@ function CreateCakeForm(props) {
   }, [formData])
 
   return (
-    <div className='absolute text-4xl bg-red-50 z-50 w-full -m-24'>
+    <div className='absolute text-4xl bg-red-50 z-50 w-full h-full -m-24'>
       <XIcon onClick={onClose} className="m-6 w-7 h-7" />
       <form className='flex flex-col text-lg space-y-12 text-center text-gray-600' onSubmit={handleSubmit}>
       <label htmlFor="name">
