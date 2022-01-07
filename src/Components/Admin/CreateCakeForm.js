@@ -26,7 +26,7 @@ function CreateCakeForm(props) {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${Cookies.get('token')}`
+        'Authorization': `Bearer ${Cookies.get('JWLRToken')}`
       },
       body: JSON.stringify(formData),
     })
@@ -54,7 +54,7 @@ function CreateCakeForm(props) {
       <label htmlFor="category_id" className='-pb-6'>
         <p>* Catégorie : </p>
         <select name="category_id" id="category_id" form="category_id" className='w-2/12 mx-auto -space-y-6 text-center rounded-xl h-8' onChange={(evt) => setCategory_id(evt.target.value)}>
-          <option>Choisir ci-dessous</option>
+          <option value="" disabled selected>Choisir ci-dessous</option>
           <option value="1">Classiques</option>
           <option value="2">Saisonniers</option>
           <option value="3">Spéciaux</option>

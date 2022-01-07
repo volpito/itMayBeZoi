@@ -39,7 +39,7 @@ function Login() {
         console.log(token)
         console.log(json)
         Cookies.set("user_id", json.token.id);
-        Cookies.set('token', token);
+        Cookies.set('JWLRToken', token);
         Cookies.set('email_owner', email);
       })
     )
@@ -53,7 +53,7 @@ function Login() {
   return (
     
     <div className='bg-red-50 p-24'>
-      {!Cookies.get('token')&& (
+      {!Cookies.get('JWLRToken')&& (
         <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm mx-auto h-full">
           <form onSubmit={onSend}>
             <div className="form-group mb-6">
@@ -138,7 +138,7 @@ function Login() {
         </div>
       )}
 
-      {Cookies.get('token') && (
+      {Cookies.get('JWLRToken') && (
         <Admin />
       )}
     </div>
